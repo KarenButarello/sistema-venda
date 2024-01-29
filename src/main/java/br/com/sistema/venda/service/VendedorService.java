@@ -1,10 +1,8 @@
 package br.com.sistema.venda.service;
-
 import br.com.sistema.venda.dto.NovoVendedor;
 import br.com.sistema.venda.model.Vendedor;
 import br.com.sistema.venda.repository.VendedorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 

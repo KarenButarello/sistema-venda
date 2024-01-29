@@ -1,9 +1,5 @@
 package br.com.sistema.venda.controller;
-
-import br.com.sistema.venda.dto.NovaVenda;
 import br.com.sistema.venda.dto.NovoVendedor;
-import br.com.sistema.venda.model.Vendedor;
-import br.com.sistema.venda.repository.VendedorRepository;
 import br.com.sistema.venda.service.VendedorService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

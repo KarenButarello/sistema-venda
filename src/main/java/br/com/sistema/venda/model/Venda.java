@@ -1,12 +1,8 @@
 package br.com.sistema.venda.model;
-
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-
-
 
 @Table(name = "vendas")
 @Entity

@@ -1,7 +1,7 @@
 package br.com.sistema.venda.controller;
 
 import br.com.sistema.venda.dto.NovaVenda;
-import br.com.sistema.venda.repository.VendaRepository;
+import br.com.sistema.venda.service.VendaService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class VendaController {
 
     @Autowired
-    private VendaRepository repository;
+    private VendaService vendaService;
 
     @PostMapping
     public ResponseEntity salvarVenda(@RequestBody @Valid NovaVenda novaVenda){
-        return ResponseEntity.ok(repository.findAll());
+        return ResponseEntity.ok(vendaService.salvarVenda(novaVenda));
     }
 }

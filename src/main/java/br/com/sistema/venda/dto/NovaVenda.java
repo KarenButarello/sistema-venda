@@ -1,5 +1,10 @@
 package br.com.sistema.venda.dto;
 
-public class NovaVenda {
+import lombok.Data;
 
+import java.math.BigDecimal;
+@Data
+public class NovaVenda {
+    private BigDecimal valor;
+    private Long idVendedor;
 }
