@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class VendaControllerTests {
+class VendaControllerTest {
     @Autowired
     private MockMvc mockMvc;
     @MockBean
