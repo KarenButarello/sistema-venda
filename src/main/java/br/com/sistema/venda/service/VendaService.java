@@ -6,7 +6,8 @@ import br.com.sistema.venda.repository.VendaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.util.List;
 
 @Service
 public class VendaService {
@@ -14,11 +15,15 @@ public class VendaService {
     private VendaRepository repository;
     public Venda salvarVenda(NovaVenda novaVenda){
         Venda venda = new Venda();
-        venda.setDataVenda(LocalDateTime.now());
+        venda.setDataVenda(LocalDate.now());
         venda.setValor(novaVenda.getValor());
         Vendedor vendedor = new Vendedor();
         vendedor.setId(novaVenda.getIdVendedor());
         venda.setVendedor(vendedor);
         return repository.save(venda);
+    }
+
+    public List<Venda> findAllByVendedorIdAndDataVendaBetween(Long id, LocalDate inicio, LocalDate fim){
+        return repository.findAllByVendedorIdAndDataVendaBetween(id, inicio, fim);
     }
 }

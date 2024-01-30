@@ -16,6 +16,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @SpringBootTest
@@ -31,7 +32,7 @@ class VendaControllerTest {
         Vendedor vendedor = new Vendedor();
 
         venda.setId(1L);
-        venda.setDataVenda(LocalDateTime.now());
+        venda.setDataVenda(LocalDate.now());
         venda.setValor(new BigDecimal(50));
         venda.setVendedor(vendedor);
 
