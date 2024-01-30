@@ -1,10 +1,8 @@
 package br.com.sistema.venda.controller;
 
-import br.com.sistema.venda.dto.NovoVendedor;
 import br.com.sistema.venda.model.Vendedor;
 import br.com.sistema.venda.service.VendedorService;
 import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentMatcher;
 import org.mockito.ArgumentMatchers;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
